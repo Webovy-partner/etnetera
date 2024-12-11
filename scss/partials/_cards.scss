@@ -9,9 +9,10 @@
     .card {
         transition: .2s;
         border-radius: 3px;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         margin: 0 1.34375em;
+        min-height: 520px;
         &.dark{
             background-color: $black;
             color: white;
