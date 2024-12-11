@@ -1,0 +1,75 @@
+html{
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 1rem;
+    color: $black;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    @media screen and (max-width: 1080px) {
+        font-size: .9rem;
+    }
+    @media screen and (max-width: $show_mobile_menu_at) {
+        padding-top: 50px;
+    }
+
+}
+
+a {
+    text-decoration: unset;
+}
+
+ul,ol{
+    margin: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.ul__check {
+    padding-left: 1.75em;
+
+    li {
+        padding-left: 1em;
+        &::marker {
+            content: url('/public/images/check-icon.svg');
+            width: 1.5em;
+            height: 1.1875em;
+        }
+    }
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: $orange;
+	border: unset;
+    border-radius: 20px;
+}

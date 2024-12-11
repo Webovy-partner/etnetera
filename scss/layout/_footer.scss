@@ -1,0 +1,35 @@
+.footer{
+    text-align: center;
+    padding-bottom: 2.5em;
+    padding-top: 2.5em;
+    @media screen and (max-width: 768px) {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    &-copyright{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &-text{
+            color: $orange;
+            font-weight: bold;
+            font-size: .875em;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        &-name{
+            font-weight: bold;
+            margin-top: 0;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+        }
+    }
+    &-group{
+        a{
+            color: $orange;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.input{
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    width: 100%;
+    max-width: 328px;
+    margin-bottom: 1.6875em;
+    border: 2px solid $black;
+    border-radius: 2px;
+    transition: .2s;
+    color: $grey;
+    box-sizing: border-box;
+    &:empty{
+        border: 2px solid #F4F4F4;
+    }
+    &:focus{
+        outline: unset;
+        border-color: $orange-light;
+    }
+}
+
+.label-input{
+    font-size: 10px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    color: $grey;
+}

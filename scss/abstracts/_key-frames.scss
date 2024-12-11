@@ -1,0 +1,8 @@
+@keyframes slide-in {
+    from {
+      transform: translateY(-100%); // Startovací pozice mimo obrazovku
+    }
+    to {
+      transform: translateX(0); // Konečná pozice
+    }
+  }

@@ -1,0 +1,66 @@
+.newsletter{
+    z-index: 3;
+    position: relative;
+    &-btn{}
+    &__popup{
+        //display: none;
+        position: fixed;
+        background-color: white;
+        border: 1px solid #00000035;
+        box-shadow: 1px 2px 7px #00000035;
+        padding: 1.25em 1.5em; 
+        bottom: calc(6em + 8px);
+        right: 2em;
+        max-width: 389px;
+        box-sizing: border-box;
+        width: 100%;
+        @media screen and (max-width: 768px) {
+            bottom: calc(7em + 8px);
+        }
+        @media screen and (max-width: 500px) {
+            width: calc(100% - 40px);
+            right: unset;
+            left: 20px;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: 30px;
+            top: 100%;
+            box-sizing: border-box;
+            border: 8px solid white;
+            border-color: transparent transparent white white;
+            transform-origin: 0 0;
+            transform: rotate(-45deg);
+            box-shadow: -3px 3px 3px 0 #00000015;
+        }
+    }
+
+    &-bottom{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: calc(100% - 2px);
+        left: 0px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-close{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+}
+
+.form_gdpr{
+    color: $grey;
+    font-size: .8em;
+    margin-top: 1.6em;
+}

@@ -1,0 +1,41 @@
+.information-line{
+    background-color: $orange;
+    padding: 1.5em 0;
+    color: white;
+    text-align: center;
+    a{
+        color: white;
+        display: flex;
+        transition: .2s;
+        &:hover{
+            color: $black;
+        }
+    }
+    p{
+        margin: 0;
+        display: flex;
+        font-size: .9375em;
+    }
+    &-date{
+        text-transform: uppercase;
+        @media screen and (max-width: 600px) {
+            margin-bottom: 1em !important;
+        }
+    }
+    &-content{
+        position: relative;
+        transform: translateY(-10px);
+    }
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        @media screen and (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.btn{
+    display: flex;
+    max-width: 235px;
+    width: 100%;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $orange;
+    min-height: 44px;
+    padding: 11px 10px;
+    box-sizing: border-box;
+    transition: .2s;
+    cursor: pointer;
+    @media screen and (max-width: 600px) {
+        max-width: 180px;
+    }
+    &-primary{
+        background-color: $orange;
+        color: white;
+        &:hover{
+            background-color: $black;
+            border-color: $black;
+        }
+    }
+    &-secondary{
+        color: $orange;
+        background-color: white;
+        &:hover{
+            color: white;
+            background-color: $orange;
+        }
+    }
+    &-close{
+        background-color: transparent;
+        width: 27px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: unset;
+        cursor: pointer;
+        img{
+            height: 27px;
+            width: auto;
+            transition: .2;
+        }
+        &:hover{
+            img{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &-newsletter{
+        border-radius: 50%;
+        width: 44px;
+        cursor: pointer;
+        height: 44px;
+        border: unset;
+        background-color: #EA1C0A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 3.375em;
+        bottom: 3em;
+        transition: .2s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
