@@ -1,9 +1,7 @@
 .newsletter{
     z-index: 3;
     position: relative;
-    &-btn{}
     &__popup{
-        //display: none;
         position: fixed;
         background-color: white;
         border: 1px solid #00000035;
