@@ -2,6 +2,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 4em;
+    gap: 2.6875em;
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
     @media screen and (max-width: 768px) {
         margin-top: 3em;
     }
@@ -9,10 +16,8 @@
     .card {
         transition: .2s;
         border-radius: 3px;
-        display: flex !important;
+        display: flex;
         flex-direction: column;
-        margin: 0 1.34375em;
-        min-height: 520px;
         &.dark{
             background-color: $black;
             color: white;
@@ -21,6 +26,15 @@
         padding: 40px 20px 20px;
         transition: .3s;
         text-align: center;
+
+        &:nth-of-type(3){
+            @media screen and (max-width: 1024px) {
+                grid-column: span 2;
+            }
+            @media screen and (max-width: 600px) {
+                grid-column: 1;
+            }g
+        }
 
         & > p{
             font-size: 1.25em;

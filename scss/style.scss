@@ -3,3 +3,7 @@
 @import 'layout';
 @import 'components';
 @import 'partials';
+
+.swiper-slide {
+    height: auto !important;
+}

@@ -11,11 +11,16 @@
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Jan Sztefek">
     <title>Etnetera Core — testovací práce</title>
-    <link rel="stylesheet" href="public/css/style.min.css">
+    <!-- <link rel="stylesheet" href="public/css/style.min.css"> -->
+     <link rel="stylesheet" href="scss/style.min.css">
     <link rel="canonical" href="https://etnetera.webovypartner.cz">
     <link href="https://cdn.prod.website-files.com/620da74f58a6ca7904e121c0/620da903828d24f5b5a88836_fav-ico-32.png" rel="shortcut icon" type="image/x-icon">
     <link href="https://cdn.prod.website-files.com/620da74f58a6ca7904e121c0/620da90935daf8a4f675a8e5_fav-ico-256.png" rel="apple-touch-icon">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="public/css/swiper-bundle.min.css" />
+
+    <script src="public/js/swiper-bundle.min.js" defer></script>
+    <script src="public/js/jquery.min.js" defer></script>
+    <script src="public/js/alpnie.min.js" defer></script>
     <script src="public/js/script.js" defer></script>
 </head>
 
@@ -43,27 +48,31 @@
         <span class="menu-shadow" :class="menuOpen ? 'active' : ''" @click="menuOpen = false"></span>
     </header>
 
-    <section class="slideshow" id="slideshow-main">
-        <div class="slideshow__item">
-            <img class="slideshow__item-bgc" src="/public/images/background.webp" alt="etnetera uvod" height="436">
-            <div class="container">
-                <h1>Přidej se v Etneteře mezi kodéry</h1>
-                <div class="slideshow__item_content">
-                    <p>Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</p>
-                    <a href="#" class="btn btn-secondary">Více o nás</a>
+    <section class="slideshow mySwiper" id="slideshow-main">
+        <div class="swiper-wrapper">
+            <div class="slideshow__item swiper-slide">
+                <img class="slideshow__item-bgc" src="/public/images/background.webp" alt="etnetera uvod" height="436">
+                <div class="container">
+                    <h1>Přidej se v Etneteře mezi kodéry</h1>
+                    <div class="slideshow__item_content">
+                        <p>Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</p>
+                        <a href="#" class="btn btn-secondary">Více o nás</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow__item swiper-slide">
+                <img class="slideshow__item-bgc" src="/public/images/background.webp" alt="etnetera uvod" height="436">
+                <div class="container">
+                    <p class="h1">Přidej se v Etneteře mezi kodéry</p>
+                    <div class="slideshow__item_content">
+                        <p>Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</p>
+                        <a href="#" class="btn btn-secondary">Více o nás</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="slideshow__item">
-            <img class="slideshow__item-bgc" src="/public/images/background.webp" alt="etnetera uvod" height="436">
-            <div class="container">
-                <p class="h1">Přidej se v Etneteře mezi kodéry</p>
-                <div class="slideshow__item_content">
-                    <p>Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</p>
-                    <a href="#" class="btn btn-secondary">Více o nás</a>
-                </div>
-            </div>
-        </div>
+        <div class="swiper-button-next swiper-button"></div>
+        <div class="swiper-button-prev swiper-button"></div>
     </section>
 
     <section class="information-line">
