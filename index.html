@@ -12,21 +12,21 @@
     <meta name="author" content="Jan Sztefek">
     <title>Etnetera Core — testovací práce</title>
     <!-- <link rel="stylesheet" href="public/css/style.min.css"> -->
-     <link rel="stylesheet" href="scss/style.min.css">
+     <link rel="stylesheet" href="https://etnetera.webovypartner.cz/cs/style.min.css">
     <link rel="canonical" href="https://etnetera.webovypartner.cz">
     <link href="https://cdn.prod.website-files.com/620da74f58a6ca7904e121c0/620da903828d24f5b5a88836_fav-ico-32.png" rel="shortcut icon" type="image/x-icon">
     <link href="https://cdn.prod.website-files.com/620da74f58a6ca7904e121c0/620da90935daf8a4f675a8e5_fav-ico-256.png" rel="apple-touch-icon">
-    <link rel="stylesheet" href="public/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://etnetera.webovypartner.cz/public/css/swiper-bundle.min.css" />
 
-    <script src="public/js/swiper-bundle.min.js" defer></script>
-    <script src="public/js/jquery.min.js" defer></script>
-    <script src="public/js/alpnie.min.js" defer></script>
-    <script src="public/js/script.js" defer></script>
+    <script src="https://etnetera.webovypartner.cz/public/js/swiper-bundle.min.js" defer></script>
+    <script src="https://etnetera.webovypartner.cz/public/js/jquery.min.js" defer></script>
+    <script src="https://etnetera.webovypartner.cz/public/js/alpnie.min.js" defer></script>
+    <script src="https://etnetera.webovypartner.cz/public/js/script.js" defer></script>
 </head>
 
 <body>
     <header class="header" x-data="{menuOpen : false}" @click.away="menuOpen = false">
-        <a href="/" class="header-logo"><img src="/public/images/etnetera-logo.svg" alt="Etnetera logo" height="50"
+        <a href="/" class="header-logo"><img src="https://etnetera.webovypartner.cz/public/images/etnetera-logo.svg" alt="Etnetera logo" height="50"
                 width="150"></a>
         <nav class="menu" :class="menuOpen ? 'active' : ''">
             <ul>
@@ -51,7 +51,7 @@
     <section class="slideshow mySwiper" id="slideshow-main">
         <div class="swiper-wrapper">
             <div class="slideshow__item swiper-slide">
-                <img class="slideshow__item-bgc" src="/public/images/background.webp" alt="etnetera uvod" height="218">
+                <figure><img class="slideshow__item-bgc" srcset="https://etnetera.webovypartner.cz/public/images/background.webp 780w, https://etnetera.webovypartner.cz/public/images/background.webp 360w" sizes="(max-width: 480px) 150px" src="https://etnetera.webovypartner.cz/public/images/background-1024x453.webp" alt="slide 1" class="uag-image-720" width="1024" height="453" title="background"  role="img"/></figure>
                 <div class="container">
                     <h1>Přidej se v Etneteře mezi kodéry</h1>
                     <div class="slideshow__item_content">
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="slideshow__item swiper-slide">
-                <img class="slideshow__item-bgc" src="/public/images/background.webp" loading="lazy" alt="etnetera uvod" height="218">
+                <figure><img class="slideshow__item-bgc" srcset="https://etnetera.webovypartner.cz/public/images/background.webp 780w, https://etnetera.webovypartner.cz/public/images/background.webp 360w" sizes="(max-width: 480px) 150px" src="https://etnetera.webovypartner.cz/public/images/background-1024x453.webp" alt="slide 1" class="uag-image-720" width="1024" height="453" title="background"  role="img"/></figure>
                 <div class="container">
                     <p class="h1">Přidej se v Etneteře mezi kodéry</p>
                     <div class="slideshow__item_content">
@@ -84,10 +84,10 @@
     </section>
 
     <section class="newsletter" x-data="{open : false}" @click.away="open = false">
-        <button class="btn-newsletter" @click="open = !open"><img src="/public/images/form-mail-icon.svg"
+        <button class="btn-newsletter" @click="open = !open"><img src="https://etnetera.webovypartner.cz/public/images/form-mail-icon.svg"
                 width="18" height="18" alt="E-mail ikona"></button>
         <div class="newsletter__popup" x-show="open">
-            <button class="btn-close" @click="open = false"><img src="/public/images/close-icon.svg" height="27"
+            <button class="btn-close" @click="open = false"><img src="https://etnetera.webovypartner.cz/public/images/close-icon.svg" height="27"
                     loading="lazy" alt="Křízek ikona"></button>
             <p class="h4">Dostávejte články přímo
                 do&nbsp;vaší e-mailové schránky!</p>
@@ -102,7 +102,7 @@
 
     <div class="grey-light-bg">
         <section class="about container" id="kdo-jsme">
-            <p><img src="/public/images/budova.webp" height="108" width="165" alt="Sídlo Etnetera">V roce 1997 si Martin a Vašek chtěli přivydělat při studiu ČVUT. Založili firmu a brzy s překvapením zjistili, že mohou zaměstnat i své přátele, kteří sdílí jejich znalosti a smysl pro humor. Po 20+ letech úspěšného fungování je <span class="text-orange">Etnetera</span> <strong>přední společností v oblasti vývoje webových portálů a aplikací.</strong> Naším cílem je být jedničkou na českém trhu v tomto segmentu. Orientujeme se na <strong>dlouhodobá partnerství a hledání jedinečných řešení s přidanou hodnotou, která vás posunou vpřed.</strong> Naše sebedůvěra stojí na silném stabilním zázemí a zkušenostech z tisíce náročných projektů pro klienty, ktěří jsou špičkou v oboru. Držíme slovo i termíny, dokážeme přiznat a napravit chybu. Věříme sobě i vám.</p>
+            <p><img src="https://etnetera.webovypartner.cz/public/images/budova.webp" height="108" width="165" alt="Sídlo Etnetera">V roce 1997 si Martin a Vašek chtěli přivydělat při studiu ČVUT. Založili firmu a brzy s překvapením zjistili, že mohou zaměstnat i své přátele, kteří sdílí jejich znalosti a smysl pro humor. Po 20+ letech úspěšného fungování je <span class="text-orange">Etnetera</span> <strong>přední společností v oblasti vývoje webových portálů a aplikací.</strong> Naším cílem je být jedničkou na českém trhu v tomto segmentu. Orientujeme se na <strong>dlouhodobá partnerství a hledání jedinečných řešení s přidanou hodnotou, která vás posunou vpřed.</strong> Naše sebedůvěra stojí na silném stabilním zázemí a zkušenostech z tisíce náročných projektů pro klienty, ktěří jsou špičkou v oboru. Držíme slovo i termíny, dokážeme přiznat a napravit chybu. Věříme sobě i vám.</p>
             <p class="about-fw">Pracujeme v liberálním a otevřeném prostředí bez kravat a procesních příruček. Inspirujeme se principy svobodné firmy, kde se zisky dělí transparentně, týmy si určují svá vlastní pravidla a management nemá nadstandardní benefity. Rádi společně sportujeme a podporujeme se. Kopeme za jeden tým. Není proto náhoda, že jsme se 4 roky po sobě umístili na třech nejvyšších příčkách v soutěži Best Employers ČR.</p>
             <div class="tooltip"><span class="tooltip-message">Ahoj</span></div>
         </section>
