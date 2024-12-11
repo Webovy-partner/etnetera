@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const hours = [8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]; // Specific hours
   const statuses = ['no-queue', 'possible-queue', 'likely-queue'];
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Random height between 20% and 100%
     const fullHourHeight = Math.floor(Math.random() * 80) + 20;
-    
+
     // Assign queue status based on height
     let fullHourStatus;
     if (fullHourHeight <= 33) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       fullHourStatus = 'likely-queue';
     }
-    
+
     fullHourCandle.classList.add(fullHourStatus);
     fullHourCandle.style.height = `${fullHourHeight}%`;
 
@@ -116,12 +116,65 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
   }
 
-
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
+  let swiper;
+  let enabled = false;
+  
+  // Function to initialize the Swiper
+  const initSwiper = () => {
+    swiper = new Swiper(".mySwiper", {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
     });
+  };
+  
+  // Function to enable loop and autoHeight, and move to the next slide
+  const enableAndMoveNext = () => {
+    if (!enabled) {
+      // Initialize Swiper on first click
+      initSwiper();
+  
+      swiper.params.loop = true;
+      swiper.params.autoHeight = true;
+      swiper.update();
+  
+      // Remove 'swiper-button-disabled' class from all buttons
+      document.querySelectorAll('.swiper-button-disabled').forEach(button => {
+        button.classList.remove('swiper-button-disabled');
+      });
+  
+      enabled = true;
+    }
+  
+    // Move to the next slide
+    swiper.slideNext();
+  };
+  
+  // Function to enable loop and autoHeight, and move to the previous slide
+  const enableAndMovePrev = () => {
+    if (!enabled) {
+      // Initialize Swiper on first click
+      initSwiper();
+  
+      swiper.params.loop = true;
+      swiper.params.autoHeight = true;
+      swiper.update();
+  
+      // Remove 'swiper-button-disabled' class from all buttons
+      document.querySelectorAll('.swiper-button-disabled').forEach(button => {
+        button.classList.remove('swiper-button-disabled');
+      });
+  
+      enabled = true;
+    }
+  
+    // Move to the previous slide
+    swiper.slidePrev();
+  };
+  
+  // Attach event listeners to buttons
+  document.querySelector(".swiper-button-next").addEventListener("click", enableAndMoveNext);
+  document.querySelector(".swiper-button-prev").addEventListener("click", enableAndMovePrev);
+  
 })
