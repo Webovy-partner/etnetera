@@ -499,7 +499,6 @@ h4, .h4 {
 }
 .newsletter__popup {
   position: fixed;
-  display: none;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.2078431373);
   box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2078431373);
@@ -518,8 +517,6 @@ h4, .h4 {
 @media screen and (max-width: 500px) {
   .newsletter__popup {
     width: calc(100% - 40px);
-    right: unset;
-    left: 20px;
   }
 }
 .newsletter__popup:after {
