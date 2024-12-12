@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
   const hours = [8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]; // Specific hours
-  const statuses = ['no-queue', 'possible-queue', 'likely-queue'];
 
   const chart = document.getElementById('chart');
 
